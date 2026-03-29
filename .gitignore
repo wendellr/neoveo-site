@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+._*
+
+# Editors
+.vscode/
+*.swp
+*.swo
+
+# Thumbnails
+Thumbs.db
+
+# Videos
+*.mp4
+
+# Legacy backup
+neoveo-ai-v2.html
