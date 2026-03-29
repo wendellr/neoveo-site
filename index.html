@@ -464,7 +464,11 @@ function setLang(l){
   document.getElementById('langSel').value=l;
   try{localStorage.setItem('neoveo-lang',l)}catch(e){}
 }
-try{const s=localStorage.getItem('neoveo-lang');if(s&&T[s])setLang(s)}catch(e){}
+try{
+  const saved=localStorage.getItem('neoveo-lang');
+  if(saved&&T[saved]){setLang(saved)}
+  else{const br=(navigator.language||navigator.userLanguage||'en').slice(0,2).toLowerCase();setLang(T[br]?br:'en')}
+}catch(e){}
 </script>
 </body>
 </html>
